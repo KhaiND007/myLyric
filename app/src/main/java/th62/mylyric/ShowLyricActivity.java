@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class ShowLyricActivity extends AppCompatActivity {
+    TextView tenBH;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +18,7 @@ public class ShowLyricActivity extends AppCompatActivity {
         // Lấy ra tên BH   , ==> ten file là:  tenBH.txt
         String tenBai = BH.getStringExtra("tenBH");
 
-
-
+        tenBH = (TextView) findViewById(R.id.tenBH);
+        tenBH.setText(tenBai);
     }
 }
